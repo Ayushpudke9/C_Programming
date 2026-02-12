@@ -1,0 +1,26 @@
+
+not function: not()
+  In python it is used to reverse a boolean value
+Ex not(True) will be False 
+
+
+
+Chained Comparisons:
+   When we write multiple comparisons in a single expression, it is chaine comparison
+
+Ex. x< y < z
+
+    Python evaluates chained comparisons from left to right.
+    ex. x < y < z is equivalent to x < y and y < z.
+
+    Evaluation:
+
+    First, x < y is evaluated. If it's False, the entire expression is False, and the rest of the comparison is skipped.
+    If x < y is True, then y < z is evaluated.
+    The entire expression is True only if both x < y and y < z are True
+
+Ex. a == b == c
+
+It will be equivalent to 
+a == b and b==c 
+So, when all three are equal then a==b==c is True

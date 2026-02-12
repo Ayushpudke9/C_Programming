@@ -1,0 +1,31 @@
+range function
+
+range function has three parameters
+start  :: is included
+end  :: is excluded
+step :: is increment value ( by default 1)
+
+working of range is very similar to slicing
+start, end and step should be ONLY integers
+
+range function creates an iterator (simple terms array)
+range function returns one value from iterator at a time
+
+ex
+for i in range(1,5): 
+    print(i) #1,2,3,4,
+
+Range doesn't create complete array at one time,
+it will return one value at a time
+So, it is very memory efficient
+
+ex
+for i in range(100000):
+    print(i) 
+# here range does not require to store 100000 values
+# it only uses memory for one element at a time
+
+range can have start, end and step as negetive numbers
+ex range(-5,-10,-1) # [-5,-6,-7,-8,-9]
+
+all rules of slicing are applicable to range function

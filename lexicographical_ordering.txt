@@ -1,0 +1,81 @@
+Sequence objects typically may be compared to 
+other objects with the same sequence type. 
+
+The comparison uses lexicographical ordering: 
+first the first two items are compared, 
+and if they differ this determines the outcome 
+of the comparison; 
+if they are equal, the next two items are compared, 
+and so on, until either sequence is exhausted. 
+If two items to be compared are themselves 
+sequences of the same type, 
+the lexicographical comparison is carried out recursively. 
+If all items of two sequences compare equal, 
+the sequences are considered equal. 
+If one sequence is an initial sub-sequence of 
+the other, the shorter sequence is the smaller 
+(lesser) one.
+
+
+Lexicographical ordering for strings uses 
+the Unicode code point number to order individual 
+characters. 
+So, lower case letters have higher ASCII value 
+than capital letters.
+Ex. “Apple” is less than “apple”
+
+
+Example of lexicographical ordering
+
+Step1:
+start by taking first character of s1 
+and first character of s2
+Step2: 
+  A. if both are same 
+  then go to step B
+  B. if one string is completed 
+        then check other string is completed or not
+        if other string is completed :: 
+            BOTH STRINGS are same!!!!!
+        else other string is not completed
+            the string which is completed is small!!    
+    else take next character from both strings
+  and go to step 2
+
+  else go to step 3
+
+step3: check which ASCII value of character is greater 
+String which has character with greater ascii value is 
+GREATER 
+
+
+Example 1:
+s1 = "IACSD"
+s2 = "IBCD"
+s1 < s2 ::: TRUE
+
+Example 2:
+s1 = "IACSD"
+s2 = "IACSD"
+s1 == s2 :::TRUE 
+BOTH ARE same
+
+Example 3:
+s1 = "IAC"
+s2 = "IACSD"
+s1 < s2 :: TRUE
+
+Example 4:
+s1 = "IAQ"
+s2 = "IACSD"
+s1 > s2 :: TRUE
+
+Example 5:
+s1 = "IACSD"
+s2 = "I"
+s1 > s2 :: TRUE
+
+Example 6:
+s1 = "IACSD"
+s2 = "IAcsd"
+s1 < s2 :: TRUE
